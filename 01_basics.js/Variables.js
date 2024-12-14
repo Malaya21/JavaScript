@@ -4,6 +4,4 @@ var schollName ="Gandhi Nodal Bidyapitha";
 console.log(fullName);
 console.log(collegeName);
 console.log(schollName);
-
-
-
+console.table([schollName,fullName,collegeName]);
