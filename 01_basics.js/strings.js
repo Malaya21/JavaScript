@@ -22,7 +22,8 @@ const string3 = new String("Malaya");
 // console.log(newStr);
 // console.log(string3.slice(0,6));
 console.log(string1.at(-6));
-
+const join = string1.concat(" ",string3);
+console.log(join);
 
 
 
