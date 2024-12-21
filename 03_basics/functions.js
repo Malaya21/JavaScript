@@ -54,7 +54,7 @@ function asAnArgument(users)
 console.log(asAnArgument(user)); // Here we pass the object as an argument 
 console.log(asAnArgument({name:'Ankit',age:21,gen:'Male'})); // here we pass the objectly directly
 //Also send array as an argument
-
+//Here we learn about the functions and how to pass the arguments in the functions
 
 
 
