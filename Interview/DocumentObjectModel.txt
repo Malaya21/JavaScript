@@ -1,0 +1,19 @@
+All the questions and answers of Document Object Model on JavaScript.
+_____________________________________________________________________
+
+Q 1. What is DOM?
+Ans. DOM stands for Document Object Model. It is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document. The document can be further processed and the results of that processing can be incorporated back into the presented page.
+
+Q 2. What is the use of DOM?
+Ans. The Document Object Model is used to represent the structure of a document so that the document can be accessed and manipulated. It provides a structured representation of the document as a tree of objects. The DOM is language-neutral, so it can be used with any programming language.
+
+Q 3. What are the different types of nodes in DOM?
+Ans. There are several types of nodes in the DOM, including:
+1. Element nodes: These are the nodes that represent the elements in the document, such as <div>, <p>, <span>, etc.
+2. Text nodes: These are the nodes that represent the text content of an element.
+3. Attribute nodes: These are the nodes that represent the attributes of an element.
+4. Comment nodes: These are the nodes that represent comments in the document.
+5. Document nodes: These are the nodes that represent the document itself.
+
+Q 4. What is the difference between innerHTML and innerText?
+Ans. innerHTML is a property of the Element object that represents the HTML content of the element, including any child elements. innerText is a property of the Element object that represents the text content of the element, excluding any child elements. innerHTML is used to get or set the HTML content of an element, while innerText is used to get or set the text content of an element.
