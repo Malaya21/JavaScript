@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation Example</title>
+</head>
+
+<body>
+    <div id="parent" style="padding: 20px; background-color: lightblue;">
+        Parent Element
+        <div id="child" style="padding: 20px; background-color: lightcoral;">
+            Child Element
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('parent').addEventListener('click', function () {
+            console.log('Parent clicked');
+        }, true);
+
+        document.getElementById('child').addEventListener('click', function (event) {
+            // event.stopPropagation(); // Stop the event from bubbling up to the parent
+            console.log('Child clicked');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Append language</title>
-</head>
-<body style="background-color: rgba(8, 6, 6, 0.957);color: aliceblue;">
+  </head>
+  <body style="background-color: rgba(8, 6, 6, 0.957); color: aliceblue">
     <ul id="ul">
-        <li id="first">JavaScript</li>
+      <li id="first">JavaScript</li>
     </ul>
 
-    <button id = 'btn'>Click</button>
-</body>
-<script>
-    const list = (lang='java')=>{
-        const li = document.createElement('li')
-        const ul =document.getElementById('ul');
-        li.innerText =lang;
-        ul.appendChild(li)
-    }
-    list('Java')
-    list('C++')
-    list('Python')
-
-
-</script>
+    <button id="btn">Click</button>
+  </body>
+  <script>
+    const list = (lang = "java") => {
+      const li = document.createElement("li");
+      const ul = document.getElementById("ul");
+      li.innerText = lang;
+      ul.appendChild(li);
+    };
+    list("Java");
+    list("C++");
+    list("Python");
+  </script>
 </html>
