@@ -14,15 +14,23 @@
             Child Element
         </div>
     </div>
-
+    <button id="myButton" style="margin-top: 20px;">Click Me</button>
     <script>
+        function printMessage() {
+            console.log('Button clicked');
+        }
+        myButton.addEventListener('click', printMessage);
         document.getElementById('parent').addEventListener('click', function () {
             console.log('Parent clicked');
-        }, true);
+            console.log(event.target);
+            console.log(event.currentTarget);
+        });
 
         document.getElementById('child').addEventListener('click', function (event) {
             // event.stopPropagation(); // Stop the event from bubbling up to the parent
             console.log('Child clicked');
+           
+            
         });
     </script>
 </body>
