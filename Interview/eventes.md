@@ -112,13 +112,59 @@
         ```
 
 10. **Can you explain the concept of event bubbling and event capturing?**
+    **Ans:** Event bubbling and event capturing are two phases of event propagation in the DOM. When an event occurs on an element, it first triggers the event handlers on the target element, then bubbles up to its parent elements. This is known as event bubbling.  
+    Event capturing, on the other hand, is the opposite process where the event is captured by the parent elements first before reaching the target element.  
+    You can specify the event phase (capturing, target, or bubbling) using the `addEventListener` method with the `useCapture` parameter set to `true` for capturing and `false` for bubbling. By default, the event phase is set to bubbling.
 
+    **Example:**
+    ```javascript
+    element.addEventListener('click', function() {
+         console.log('Button clicked');
+    }, true); // Use capturing phase
+    ```
 11. **How can you trigger an event programmatically in JavaScript?**
+    **Ans:** You can trigger an event programmatically using the `dispatchEvent` method. You need to create a new event object with the desired event type and options, then dispatch it on the target element.  
+    **Example:**
+    ```javascript
+    var event = new Event('click', {
+         bubbles: true,
+         cancelable: true
+    });
+    element.dispatchEvent(event);
+    ```
 
 12. **What is the `once` option in `addEventListener` and how does it work?**
+    **Ans:** The `once` option in the `addEventListener` method allows you to add an event listener that will be automatically removed after it is triggered once. This is useful for handling events that should only 
+    execute once, such as a button click that should trigger an action only once.
+    **Example:**
+    ```javascript   
+    element.addEventListener('click', function() {
+         console.log('Button clicked');
+    }, { once: true });
+    ```
 
 13. **How do you handle events for dynamically added elements?**
+    **Ans:** You can handle events for dynamically added elements by using event delegation. Instead of adding event listeners directly to the dynamically added elements, you can add a single event listener to a parent element that is present in the DOM when the page loads. When the event occurs, you can check the target element of the event and handle it accordingly.
+    **Example:**
+    ```javascript
+    document.getElementById('parentElement').addEventListener('click', function(event) {
+         if (event.target.classList.contains('dynamicElement')) {
+             console.log('Dynamic element clicked');
+         }
+    });
+    ```
 
 14. **What is the difference between `focus` and `blur` events?**
+    **Ans:** The `focus` event is triggered when an element gains focus, such as when a user clicks on an input field or navigates to it using the keyboard. The `blur` event is triggered when an element loses focus, such as when a user clicks outside the input field or navigates away from it using the keyboard.
 
-15. **How can you debounce or throttle events in JavaScript?**
+    **Example:**
+    ```javascript
+    document.getElementById('myInput').addEventListener('focus', function() {
+         console.log('Input focused');
+    });
+
+    document.getElementById('myInput').addEventListener('blur', function() {
+         console.log('Input blurred');
+    });
+    ```
+
